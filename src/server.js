@@ -10,7 +10,7 @@ import { createTask, publicTask, readTask, updateTask } from './store.js';
 import { desktopRequest } from './desktop-client.js';
 
 const here = dirname(fileURLToPath(import.meta.url));
-const server = new McpServer({ name: 'xiaomi-mimo-codex-bridge', version: '0.1.0' });
+const server = new McpServer({ name: 'xiaomi-mimo-codex-bridge', version: '0.1.1' });
 const terminal = new Set(['completed', 'failed', 'cancelled', 'result_unknown']);
 const desktopMode = process.env.MIMO_BRIDGE_MODE === 'desktop';
 const cliTestMode = process.env.MIMO_BRIDGE_MODE === 'cli-test';
@@ -163,7 +163,7 @@ server.registerTool('mimo_bridge_info', {
   inputSchema: {},
   annotations: { readOnlyHint: true, openWorldHint: false },
 }, async () => response({
-  version: '0.1.0',
+  version: '0.1.1',
   execution_surface: desktopMode ? 'MiMo Desktop' : cliTestMode ? 'MiMo Code CLI test fixture' : 'disabled',
   desktop_session_integration: desktopMode ? 'Unix socket receiver plugin' : 'unverified',
   desktop_membership_entitlement: desktopMode ? 'mimo-desktop model provider selected' : 'unverified',

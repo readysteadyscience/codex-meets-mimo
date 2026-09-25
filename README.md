@@ -2,7 +2,7 @@
 
 A local, macOS bridge for delegating code writing and read-only code review from a Codex task to the conversation currently selected in Xiaomi MiMo Desktop. The Codex task waits for MiMo's report, then verifies the files or review findings itself. MiMo never runs Git as part of a delegated task.
 
-The Codex plugin is named **MiMo Bridge**. The MiMo skill is named **Codex Bridge**. Codex uses the included shared icon; MiMo Desktop currently presents the skill with its own default icon.
+Both the Codex plugin and MiMo skill display as **Codex Meets MiMo**. Codex uses the included shared icon; MiMo Desktop currently presents the skill with its own default icon.
 
 ## Requirements
 
@@ -20,7 +20,7 @@ curl -fsSL https://raw.githubusercontent.com/readysteadyscience/codex-meets-mimo
 
 The installer downloads the public source into a temporary directory, installs both components, backs up MiMo's configuration, and removes the temporary download. It does not require users to clone or maintain the repository. It refuses to overwrite a previous installation. It does not ask for passwords or tokens. **Restart MiMo Desktop and start a new Codex task** afterwards so both apps load the components.
 
-In Codex, verify with `codex plugin list` and ask for `mimo_bridge_info`. In MiMo, check **Plugins → Other → Codex Bridge**. Choose a MiMo conversation before dispatching. You may add the same project directory to MiMo yourself, but the bridge does not require or manage project lists.
+In Codex, verify with `codex plugin list` and ask for `mimo_bridge_info`. In MiMo, check **Plugins → Other → Codex Meets MiMo**. Choose a MiMo conversation before dispatching. You may add the same project directory to MiMo yourself, but the bridge does not require or manage project lists.
 
 For source inspection or contribution, use `git clone` and `npm ci` separately. Review the installer before running it if you prefer.
 

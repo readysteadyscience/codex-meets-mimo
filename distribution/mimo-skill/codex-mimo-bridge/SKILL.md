@@ -3,7 +3,7 @@ name: codex-mimo-bridge
 description: Follow a bounded code writing or code review task sent from Codex into the currently selected MiMo Desktop conversation, and return a clear completion report for Codex to verify.
 ---
 
-# Codex Bridge
+# Codex Meets MiMo
 
 Use this skill only for a task explicitly sent by the local Codex bridge. The same MiMo conversation may receive several successive steps of one Codex development task; preserve its context while following the latest bounded instruction.
 

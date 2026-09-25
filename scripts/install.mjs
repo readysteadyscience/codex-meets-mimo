@@ -72,7 +72,7 @@ writeFileSync(join(plugin, '.mcp.json'), JSON.stringify({
 mkdirSync(join(marketplace, '.agents', 'plugins'), { recursive: true });
 writeFileSync(join(marketplace, '.agents', 'plugins', 'marketplace.json'), JSON.stringify({
   name: marketplaceName,
-  interface: { displayName: 'MiMo Bridge' },
+  interface: { displayName: 'Codex Meets MiMo' },
   plugins: [{ name: 'xiaomi-mimo-bridge', source: { source: 'local', path: './plugins/xiaomi-mimo-bridge' }, policy: { installation: 'AVAILABLE', authentication: 'ON_INSTALL' }, category: 'Coding' }],
 }, null, 2) + '\n');
 run('codex', ['plugin', 'marketplace', 'add', marketplace]);
@@ -81,4 +81,4 @@ copyNew(join(source, 'distribution', 'mimo-skill', 'codex-mimo-bridge'), mimoSki
 mkdirSync(dirname(mimoConfig), { recursive: true });
 cpSync(mimoConfig, `${mimoConfig}.bridge-backup-${Date.now()}`);
 writeFileSync(mimoConfig, nextConfig);
-console.log('Installed MiMo Bridge (Codex) and Codex Bridge (MiMo). Restart MiMo Desktop and start a new Codex task to load them.');
+console.log('Installed Codex Meets MiMo in Codex and Xiaomi MiMo Desktop. Restart MiMo Desktop and start a new Codex task to load them.');
