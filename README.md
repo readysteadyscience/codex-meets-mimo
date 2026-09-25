@@ -32,7 +32,7 @@ The originating Codex task must remain running to receive and display the result
 
 ## Data and boundaries
 
-The MiMo receiver listens at `~/.local/state/xiaomi-mimo-codex-bridge/desktop.sock` with mode `0600`; task receipts are stored in the same private local state directory. Any process running as the same macOS user can potentially connect to a same-user Unix socket, so install this only in a trusted user account. The bridge does not send source to a separate bridge server. MiMo processing follows the user's MiMo Desktop account and service settings.
+The MiMo receiver listens at `~/.local/state/codex-meets-mimo/desktop.sock` with mode `0600`; task receipts are stored in the same private local state directory. Any process running as the same macOS user can potentially connect to a same-user Unix socket, so install this only in a trusted user account. The bridge does not send source to a separate bridge server. MiMo processing follows the user's MiMo Desktop account and service settings.
 
 The installer changes only its own install directory, the MiMo skill directory, MiMo's `plugin` config array, and Codex plugin registration. It does not edit project files during installation. Delegated MiMo tasks may edit the project files specified by Codex. The installer does not uninstall or change any existing global MCP entry, so older local bridges may need manual removal after migration.
 

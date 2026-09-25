@@ -1,5 +1,5 @@
 ---
-name: codex-mimo-bridge
+name: codex-meets-mimo
 description: Follow a bounded code writing or code review task sent from Codex into the currently selected MiMo Desktop conversation, and return a clear completion report for Codex to verify.
 ---
 

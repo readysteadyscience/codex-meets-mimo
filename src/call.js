@@ -20,7 +20,7 @@ if (!allowed.has(name) || (file && process.argv.length !== 4)) {
 let client;
 try {
   const entries = JSON.parse(execFileSync('codex', ['mcp', 'list', '--json'], { encoding: 'utf8', timeout: 10000 }));
-  const entry = entries.find((item) => item.name === 'xiaomi_mimo_bridge');
+  const entry = entries.find((item) => item.name === 'codex-meets-mimo');
   const config = entry?.transport;
   if (!entry?.enabled || config?.type !== 'stdio' ||
       config.args?.[0] !== fileURLToPath(new URL('./server.js', import.meta.url)) ||

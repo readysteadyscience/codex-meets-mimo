@@ -2,7 +2,7 @@ import net from 'node:net';
 import { homedir } from 'node:os';
 import { join } from 'node:path';
 
-const defaultSocket = join(homedir(), '.local', 'state', 'xiaomi-mimo-codex-bridge', 'desktop.sock');
+const defaultSocket = join(homedir(), '.local', 'state', 'codex-meets-mimo', 'desktop.sock');
 
 export function desktopRequest(request, timeoutMs = 10000) {
   const path = process.env.MIMO_BRIDGE_DESKTOP_SOCKET || defaultSocket;

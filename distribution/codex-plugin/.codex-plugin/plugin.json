@@ -1,6 +1,6 @@
 {
-  "name": "xiaomi-mimo-bridge",
-  "version": "0.1.1",
+  "name": "codex-meets-mimo",
+  "version": "0.2.0",
   "description": "Delegate code writing and code review to the selected Xiaomi MiMo Desktop conversation and return results to the originating Codex task.",
   "author": {
     "name": "readysteadyscience"

@@ -8,13 +8,13 @@ import { applyEdits, modify, parse, printParseErrorCode } from 'jsonc-parser';
 
 const source = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const home = homedir();
-const installRoot = join(home, '.local', 'share', 'xiaomi-mimo-bridge');
+const installRoot = join(home, '.local', 'share', 'codex-meets-mimo');
 const runtime = join(installRoot, 'runtime');
 const marketplace = join(installRoot, 'marketplace');
-const plugin = join(marketplace, 'plugins', 'xiaomi-mimo-bridge');
-const mimoSkill = join(home, '.config', 'mimocode', 'skills', 'codex-mimo-bridge');
+const plugin = join(marketplace, 'plugins', 'codex-meets-mimo');
+const mimoSkill = join(home, '.config', 'mimocode', 'skills', 'codex-meets-mimo');
 const mimoConfig = join(home, '.config', 'mimocode', 'mimocode.jsonc');
-const marketplaceName = 'mimo-bridge-local';
+const marketplaceName = 'codex-meets-mimo-local';
 
 function run(command, args, cwd) {
   const result = spawnSync(command, args, { cwd, stdio: 'inherit' });
@@ -62,7 +62,7 @@ mkdirSync(join(plugin, 'assets'), { recursive: true });
 cpSync(join(source, 'assets', 'bridge.png'), join(plugin, 'assets', 'bridge.png'));
 writeFileSync(join(plugin, '.mcp.json'), JSON.stringify({
   mcpServers: {
-    xiaomi_mimo_bridge: {
+    'codex-meets-mimo': {
       command: process.execPath,
       args: [join(runtime, 'src', 'server.js')],
       env: { MIMO_BRIDGE_MODE: 'desktop', MIMO_BRIDGE_ENABLE_DISPATCH: '1' },
@@ -73,11 +73,11 @@ mkdirSync(join(marketplace, '.agents', 'plugins'), { recursive: true });
 writeFileSync(join(marketplace, '.agents', 'plugins', 'marketplace.json'), JSON.stringify({
   name: marketplaceName,
   interface: { displayName: 'Codex Meets MiMo' },
-  plugins: [{ name: 'xiaomi-mimo-bridge', source: { source: 'local', path: './plugins/xiaomi-mimo-bridge' }, policy: { installation: 'AVAILABLE', authentication: 'ON_INSTALL' }, category: 'Coding' }],
+  plugins: [{ name: 'codex-meets-mimo', source: { source: 'local', path: './plugins/codex-meets-mimo' }, policy: { installation: 'AVAILABLE', authentication: 'ON_INSTALL' }, category: 'Coding' }],
 }, null, 2) + '\n');
 run('codex', ['plugin', 'marketplace', 'add', marketplace]);
-run('codex', ['plugin', 'add', `xiaomi-mimo-bridge@${marketplaceName}`]);
-copyNew(join(source, 'distribution', 'mimo-skill', 'codex-mimo-bridge'), mimoSkill);
+run('codex', ['plugin', 'add', `codex-meets-mimo@${marketplaceName}`]);
+copyNew(join(source, 'distribution', 'mimo-skill', 'codex-meets-mimo'), mimoSkill);
 mkdirSync(dirname(mimoConfig), { recursive: true });
 cpSync(mimoConfig, `${mimoConfig}.bridge-backup-${Date.now()}`);
 writeFileSync(mimoConfig, nextConfig);

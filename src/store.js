@@ -3,7 +3,7 @@ import { mkdirSync, openSync, closeSync, readFileSync, renameSync, writeFileSync
 import { homedir } from 'node:os';
 import { join } from 'node:path';
 
-export const stateDir = process.env.MIMO_BRIDGE_STATE_DIR || join(homedir(), '.local', 'state', 'xiaomi-mimo-codex-bridge');
+export const stateDir = process.env.MIMO_BRIDGE_STATE_DIR || join(homedir(), '.local', 'state', 'codex-meets-mimo');
 
 export function prepareStore() {
   mkdirSync(stateDir, { recursive: true, mode: 0o700 });

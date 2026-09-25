@@ -3,9 +3,9 @@ import { chmodSync, existsSync, lstatSync, mkdirSync, readFileSync, unlinkSync }
 import { homedir } from 'node:os';
 import { join } from 'node:path';
 
-const stateDir = join(homedir(), '.local', 'state', 'xiaomi-mimo-codex-bridge');
+const stateDir = join(homedir(), '.local', 'state', 'codex-meets-mimo');
 const socketPath = process.env.MIMO_BRIDGE_DESKTOP_SOCKET || join(stateDir, 'desktop.sock');
-const singleton = Symbol.for('xiaomi-mimo-codex-bridge.desktop-listener');
+const singleton = Symbol.for('codex-meets-mimo.desktop-listener');
 const pending = new Map();
 
 async function selectedDesktopModel(client) {

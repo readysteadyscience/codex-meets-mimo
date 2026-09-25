@@ -1,5 +1,5 @@
 ---
-name: xiaomi-mimo-delegation
+name: codex-meets-mimo
 description: Delegate code writing or code review to Xiaomi MiMo Desktop when the user assigns a task or development stage to MiMo; receive each result and continue the originating Codex task.
 ---
 
