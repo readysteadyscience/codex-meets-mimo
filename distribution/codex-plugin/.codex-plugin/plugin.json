@@ -1,0 +1,33 @@
+{
+  "name": "xiaomi-mimo-bridge",
+  "version": "0.1.0",
+  "description": "Delegate code writing and code review to the selected Xiaomi MiMo Desktop conversation and return results to the originating Codex task.",
+  "author": {
+    "name": "readysteadyscience"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "MiMo Bridge",
+    "shortDescription": "委派 MiMo 写代码或审查，并在原 Codex 任务收回结果",
+    "longDescription": "将当前阶段的代码编写或审查步骤委派到用户选中的 MiMo Desktop 对话。Codex 在原任务等待结果，随后独立验证和继续下一步。",
+    "developerName": "readysteadyscience",
+    "category": "Coding",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "brandColor": "#11B9E9",
+    "composerIcon": "./assets/bridge.png",
+    "logo": "./assets/bridge.png",
+    "logoDark": "./assets/bridge.png",
+    "defaultPrompt": [
+      "本阶段代码由 Xiaomi MiMo 编写；请规划步骤，逐步委派并在每步返回后验证。"
+    ],
+    "websiteURL": "https://github.com/readysteadyscience/codex-meets-mimo-bridge"
+  },
+  "mcpServers": "./.mcp.json",
+  "homepage": "https://github.com/readysteadyscience/codex-meets-mimo-bridge",
+  "repository": "https://github.com/readysteadyscience/codex-meets-mimo-bridge",
+  "license": "MIT"
+}
