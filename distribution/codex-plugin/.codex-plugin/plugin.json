@@ -24,10 +24,10 @@
     "defaultPrompt": [
       "本阶段代码由 Xiaomi MiMo 编写；请规划步骤，逐步委派并在每步返回后验证。"
     ],
-    "websiteURL": "https://github.com/readysteadyscience/codex-meets-mimo-bridge"
+    "websiteURL": "https://github.com/readysteadyscience/codex-and-mimo-bridge"
   },
   "mcpServers": "./.mcp.json",
-  "homepage": "https://github.com/readysteadyscience/codex-meets-mimo-bridge",
-  "repository": "https://github.com/readysteadyscience/codex-meets-mimo-bridge",
+  "homepage": "https://github.com/readysteadyscience/codex-and-mimo-bridge",
+  "repository": "https://github.com/readysteadyscience/codex-and-mimo-bridge",
   "license": "MIT"
 }
