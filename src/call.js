@@ -38,7 +38,7 @@ try {
   });
   const args = JSON.parse(input);
   if (!args || typeof args !== 'object' || Array.isArray(args)) throw new Error('Arguments must be a JSON object');
-  client = new Client({ name: 'xiaomi-mimo-codex-local-client', version: '0.1.0' });
+  client = new Client({ name: 'codex-meets-mimo-local-client', version: '0.2.0' });
   await client.connect(new StdioClientTransport({
     command: config.command, args: config.args, cwd: config.cwd || undefined,
     env: { ...process.env, ...config.env },
